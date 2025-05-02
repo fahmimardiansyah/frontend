@@ -1,12 +1,11 @@
-// src/components/Customer/CustomerList.jsx
 import React, { useEffect, useState } from "react";
 import CustomerForm from "./CustomerForm";
+import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
 
 function CustomerList() {
   const [customers, setCustomers] = useState([]);
   const [editingCustomer, setEditingCustomer] = useState(null);
 
-  // Ambil data dari API
   useEffect(() => {
     fetchCustomers();
   }, []);
@@ -27,19 +26,37 @@ function CustomerList() {
   };
 
   return (
-    <div>
+    <Box sx={{ padding: 3 }}>
       <CustomerForm refresh={fetchCustomers} editingCustomer={editingCustomer} setEditingCustomer={setEditingCustomer} />
 
-      <ul>
-        {customers.map((cust) => (
-          <li key={cust.id}>
-            {cust.name} - {cust.phone}
-            <button onClick={() => handleEdit(cust)}>Edit</button>
-            <button onClick={() => handleDelete(cust.id)}>Hapus</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <TableContainer component={Paper} sx={{ marginTop: 3 }}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell><strong>Nama</strong></TableCell>
+              <TableCell><strong>Nomor HP</strong></TableCell>
+              <TableCell><strong>Actions</strong></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {customers.map((cust) => (
+              <TableRow key={cust.id}>
+                <TableCell>{cust.name}</TableCell>
+                <TableCell>{cust.phone}</TableCell>
+                <TableCell>
+                  <Button variant="outlined" color="primary" onClick={() => handleEdit(cust)} sx={{ marginRight: 1 }}>
+                    Edit
+                  </Button>
+                  <Button variant="outlined" color="error" onClick={() => handleDelete(cust.id)}>
+                    Hapus
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
   );
 }
 

@@ -8,7 +8,7 @@ function Login() {
         <Typography variant="h5" gutterBottom>Login</Typography>
         <TextField fullWidth margin="normal" label="Username" />
         <TextField fullWidth margin="normal" label="Password" type="password" />
-        <Button variant="contained" color="primary" fullWidth style={{ marginTop: "1rem" }}>
+        <Button variant="contained" color="primary" fullWidth style={{ marginTop: "1rem", backgroundColor: "#123458"}}>
           Login
         </Button>
       </Paper>

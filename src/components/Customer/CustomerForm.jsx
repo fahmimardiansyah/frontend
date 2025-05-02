@@ -1,5 +1,5 @@
-// src/components/Customer/CustomerForm.jsx
 import React, { useEffect, useState } from "react";
+import { Box, Button, TextField } from "@mui/material";
 
 function CustomerForm({ refresh, editingCustomer, setEditingCustomer }) {
   const [name, setName] = useState("");
@@ -43,22 +43,40 @@ function CustomerForm({ refresh, editingCustomer, setEditingCustomer }) {
 
   return (
     <form onSubmit={handleSubmit} style={{ marginBottom: "1rem" }}>
-      <input
-        placeholder="Nama"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        placeholder="Nomor HP"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        required
-      />
-      <button type="submit">{editingCustomer ? "Update" : "Tambah"}</button>
-      {editingCustomer && (
-        <button onClick={() => setEditingCustomer(null)}>Batal</button>
-      )}
+      <Box sx={{ display: "flex", gap: 2 }}>
+        <TextField
+          label="Nama"
+          variant="outlined"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          fullWidth
+        />
+        <TextField
+          label="Nomor HP"
+          variant="outlined"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          required
+          fullWidth
+        />
+      </Box>
+
+      <Box sx={{ marginTop: 2 }}>
+        <Button type="submit" variant="contained" color="primary">
+          {editingCustomer ? "Update" : "Tambah"}
+        </Button>
+        {editingCustomer && (
+          <Button
+            variant="outlined"
+            color="secondary"
+            sx={{ marginLeft: 2 }}
+            onClick={() => setEditingCustomer(null)}
+          >
+            Batal
+          </Button>
+        )}
+      </Box>
     </form>
   );
 }
