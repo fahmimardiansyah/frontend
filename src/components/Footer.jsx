@@ -9,7 +9,7 @@ function Footer() {
         color: "#123458",
         textAlign: "center",
         padding: "1rem",
-        marginTop: "auto", // Agar footer berada di bawah
+        marginTop: "auto",
       }}
     >
       <Typography variant="body2">

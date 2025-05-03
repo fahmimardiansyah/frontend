@@ -118,9 +118,8 @@ function TransactionList() {
     setOpen(false);
   };
 
-  // Hapus transaksi
   const handleDelete = async (id) => {
-    // Menghapus transaksi dari data dummy
+
     const filteredTransactions = transactions.filter((trx) => trx.id !== id);
     setTransactions(filteredTransactions);
   };
@@ -128,11 +127,9 @@ function TransactionList() {
   return (
     <Box sx={{ py: 4 }}>
 
-      {/* Daftar Transaksi */}
       <Container>
         <Grid container spacing={2}>
           {transactions.map((trx) => {
-            // Ambil data customer terkait berdasarkan customerId transaksi
             const customer = customers.find((customer) => customer.id === trx.customerId);
 
             return (
@@ -151,7 +148,6 @@ function TransactionList() {
                     Harga: Rp{trx.price} - Status: {trx.status}
                   </Typography>
                   <Typography variant="body2" sx={{ mb: 2 }}>
-                    {/* Menampilkan siapa yang melakukan transaksi */}
                     <strong>Admin:</strong> {trx.createdBy || "Tidak Diketahui"}
                   </Typography>
                   <Button
@@ -177,7 +173,7 @@ function TransactionList() {
         </Grid>
       </Container>
 
-      {/* Dialog untuk Detail Transaksi */}
+
       <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
         <DialogTitle>Detail Transaksi</DialogTitle>
         <DialogContent>
@@ -189,7 +185,6 @@ function TransactionList() {
               <Typography variant="body1"><strong>Harga:</strong> Rp{selectedTransaction.price}</Typography>
               <Typography variant="body1"><strong>Status:</strong> {selectedTransaction.status}</Typography>
               <Typography variant="body1"><strong>Waktu Transaksi:</strong> {selectedTransaction.transactionTime}</Typography>
-              {/* Menampilkan siapa yang melakukan transaksi */}
               <Typography variant="body1"><strong>Admin:</strong> {selectedTransaction.createdBy || "Tidak Diketahui"}</Typography>
             </Box>
           )}

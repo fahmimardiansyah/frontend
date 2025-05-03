@@ -16,7 +16,7 @@ function Header() {
 
   const handleLogout = () => {
     localStorage.removeItem("userId");
-    navigate("/login"); // Setelah logout arahkan ke halaman login
+    navigate("/login"); 
   };
 
   return (
@@ -25,12 +25,11 @@ function Header() {
       sx={{ backgroundColor: "#fc8428", color: "#fff", padding: "16px 0" }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        {/* Judul Website */}
         <Typography variant="h4" sx={{ fontWeight: "bold" }}>
           DATAin
         </Typography>
 
-        {/* Menu Navigasi */}
+
         <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
           <Button color="inherit" component={Link} to="/" sx={{ fontSize: 16, textTransform: "none" }}>
             Dashboard
@@ -43,7 +42,6 @@ function Header() {
           </Button>
         </Box>
 
-        {/* Ikon Notifikasi dan Tombol Auth */}
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Badge badgeContent={4} color="error">
             <NotificationsIcon sx={{ color: "#fff", marginRight: 2 }} />
