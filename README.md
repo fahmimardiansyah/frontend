@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+📱 DATAin – Website Pembelian Paket Data
+DATAin adalah platform web e-commerce yang dirancang untuk memudahkan pembelian paket data internet. Website ini dibangun dengan antarmuka yang modern dan alur pengguna yang sederhana, sebagai bagian dari technical test internship posisi Frontend Developer.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ Fitur-Fitur Utama
+🔐 Autentikasi Login/Logout
 
-## Available Scripts
+Sistem login sederhana dengan validasi dan penyimpanan status login menggunakan localStorage.
 
-In the project directory, you can run:
+🏠 Landing Page / Dashboard
 
-### `npm start`
+Hero section dengan ilustrasi dan tombol Call to Action (CTA) untuk login/mulai menggunakan layanan.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+👥 Customer List
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Menampilkan daftar pelanggan DATAin secara dinamis dari file db.json.
 
-### `npm test`
+💳 Riwayat Transaksi
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Menampilkan list paket data yang telah dibeli dan diaktifkan.
 
-### `npm run build`
+🎨 UI Modern & Responsif
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dibangun dengan MUI (Material UI) dan custom styling.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ilustrasi, font, dan warna disesuaikan agar konsisten dengan prototipe Figma.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠 Tech Stack
+Frontend:
 
-### `npm run eject`
+ReactJS (Hooks, Router)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+MUI (Material UI)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Fetch API (tanpa axios)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Mock Backend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+JSON Server (db.json) sebagai simulasi API
 
-## Learn More
+🔄 Alur & Estimasi Waktu Pengerjaan
+Alur Proyek:
+Landing Page → Login
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Dashboard → Menampilkan ilustrasi, transaksi terbaru, dan customer list
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Halaman Customer & Transaction → Menampilkan data dari mock API (db.json)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Waktu pengerjaan:
+- Mulai: 1 Mei 2025 / 13:00 - 15:00
+- Dilanjutkan: 2 April 2025 / 12:00 - 18.00
+-Finish : 3 April 2025/ 08.00 - 13.00
+- Total estimasi waktu: sekitar ?? jam efektif (desain + prototype + coding)

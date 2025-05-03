@@ -21,10 +21,10 @@ function DashboardPage() {
         sx={{
           backgroundColor: "#123458",
           py: { xs: 8, md: 12 },
-          px: { xs: 10, md: 6 },
+          px: { xs: 12, md: 12 },
         }}
       >
-        <Grid container alignItems="center" spacing={8}>
+        <Grid container alignItems="center" spacing={30}>
           <Grid item xs={12} md={6}>
             <Typography
               variant="h2"
@@ -43,8 +43,7 @@ function DashboardPage() {
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, color: "white" }}>
               Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend proin
-              massa tincidunt viverra lectus pulvinar. Nunc ipsum est
-              pellentesque turpis ultricies.
+              massa tincidunt viverra lectus pulvinar.
             </Typography>
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
