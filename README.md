@@ -49,4 +49,4 @@ Waktu pengerjaan:
 - Mulai: 1 Mei 2025 / 13:00 - 15:00
 - Dilanjutkan: 2 April 2025 / 12:00 - 18.00
 -Finish : 3 April 2025/ 08.00 - 13.00
-- Total estimasi waktu: sekitar ?? jam efektif (desain + prototype + coding)
+- Total estimasi waktu: sekitar 14 jam efektif (desain + prototype + coding)
