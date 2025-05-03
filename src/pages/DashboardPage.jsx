@@ -7,10 +7,13 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import CustomerList from "../components/Customer/CustomerList";
 import TransactionList from "../components/Transaction/TransactionList";
 
 function DashboardPage() {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Hero Section */}
@@ -21,8 +24,7 @@ function DashboardPage() {
           px: { xs: 10, md: 6 },
         }}
       >
-        <Grid container alignItems="center" spacing={4}>
-          {/* Kiri - Teks */}
+        <Grid container alignItems="center" spacing={8}>
           <Grid item xs={12} md={6}>
             <Typography
               variant="h2"
@@ -31,7 +33,7 @@ function DashboardPage() {
               <span
                 style={{
                   textDecoration: "underline",
-                  textDecorationColor: "#fffff",
+                  textDecorationColor: "#ffffff",
                   textDecorationThickness: "6px",
                 }}
               >
@@ -55,12 +57,14 @@ function DashboardPage() {
                   py: 1.5,
                   borderRadius: "12px",
                 }}
+                onClick={() => navigate("/login")}
               >
                 Log in
               </Button>
             </Box>
           </Grid>
-          <Grid container spacing={2}>
+
+          <Grid container spacing={10}>
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: "center" }}>
                 <img
@@ -74,7 +78,7 @@ function DashboardPage() {
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: "center" }}>
                 <img
-                  src="/images/Teacher.png" // Ganti dengan path gambar yang diinginkan
+                  src="/images/Teacher.png"
                   alt="Second Illustration"
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
@@ -84,30 +88,35 @@ function DashboardPage() {
         </Grid>
       </Box>
 
-      {/* Transaction List Section */}
-      <Box sx={{ px: { xs: 2, md: 6 }, py: 6 }}>
-        <Grid
-          container
-          spacing={4}
-          justifyContent="center"
-          alignItems="stretch"
+      {/* Transaction List Banner Style */}
+      <Box
+        sx={{
+          backgroundColor: "#fc8428",
+          py: { xs: 4, md: 8 },
+          px: { xs: 4, md: 6 },
+          textAlign: "center",
+          boxShadow: "inset 0 -4px 10px rgba(0,0,0,0.1)",
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "bold", mb: 4, color: "white" }}
         >
-          {/* Transaction List Card */}
-          <Grid item xs={12} sm={6} md={4}>
+          Recent Transactions
+        </Typography>
+        <Grid container spacing={4} justifyContent="center">
+          <Grid item xs={12} md={8}>
             <Card
               sx={{
-                height: "100%",
                 display: "flex",
                 flexDirection: "column",
                 p: 2,
                 borderRadius: "16px",
                 boxShadow: 3,
+                backgroundColor: "white",
               }}
             >
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: "bold" }}>
-                  Transactions
-                </Typography>
+              <CardContent>
                 <TransactionList />
               </CardContent>
             </Card>
@@ -115,16 +124,20 @@ function DashboardPage() {
         </Grid>
       </Box>
 
+      {/* Customer List Banner Style */}
       <Box
         sx={{
-          backgroundColor: "#123458", // Ubah warna latar belakang sesuai desain Anda
+          backgroundColor: "#123458",
           py: { xs: 4, md: 8 },
           px: { xs: 4, md: 6 },
           textAlign: "center",
-          boxShadow: "inset 0 -4px 10px rgba(0,0,0,0.1)", // Menambahkan shadow agar terasa seperti banner
+          boxShadow: "inset 0 -4px 10px rgba(0,0,0,0.1)",
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4, color: "white" }}>
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "bold", mb: 4, color: "white" }}
+        >
           Our Customers
         </Typography>
         <Grid container spacing={4} justifyContent="center">
@@ -136,7 +149,7 @@ function DashboardPage() {
                 p: 2,
                 borderRadius: "16px",
                 boxShadow: 3,
-                backgroundColor: "white", // Background putih untuk card
+                backgroundColor: "white",
               }}
             >
               <CardContent>

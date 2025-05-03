@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "username": "user1",
+      "password": "1",
+      "name": "Jonah Hill"
+    },
+    {
+      "id": "u2",
+      "username": "user2",
+      "password": "2",
+      "name": "Frank Gibs"
+    }
+  ],
+  "packages": [
+    {
+      "id": "p01",
+      "name": "Data Hemat 5GB",
+      "price": 30000,
+      "validity": "15 Hari",
+      "description": "5GB semua jaringan + 1GB aplikasi chat"
+    },
+    {
+      "id": "p02",
+      "name": "Data Super 15GB",
+      "price": 75000,
+      "validity": "30 Hari",
+      "description": "15GB semua jaringan + bonus 2GB malam"
+    },
+    {
+      "id": "p03",
+      "name": "Freedom Max 30GB",
+      "price": 120000,
+      "validity": "45 Hari",
+      "description": "30GB semua jaringan + akses gratis YouTube"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "trx001",
+      "userId": "u1",
+      "packageId": "p01",
+      "date": "2025-05-01",
+      "status": "completed",
+      "activatedAt": "2025-05-01T08:30:00Z"
+    },
+    {
+      "id": "trx002",
+      "userId": "u2",
+      "packageId": "p02",
+      "date": "2025-05-02",
+      "status": "completed",
+      "activatedAt": "2025-05-02T10:45:00Z"
+    },
+    {
+      "id": "trx003",
+      "userId": "u1",
+      "packageId": "p03",
+      "date": "2025-05-03",
+      "status": "pending",
+      "activatedAt": null
+    }
+  ]
+}
